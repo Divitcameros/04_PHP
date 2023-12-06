@@ -22,7 +22,7 @@ if (!is_numeric($num)) {
   } elseif ($num < 1 || $num > 99) {
     $error = '1から99までの数値を入力してください';
   } else {
-    // $arrで取得したものを$numArrのキーとして、count($numArr[$arr])は、
+    // $arrで取得した値を$numArrのキーとして、count($numArr[$arr])は、
     // キー$arrに該当する二次配列の中身の要素数をカウントしている。
     // (例：$arrが0を取得したら、それに該当する$numArrの二次配列である[30, 65, 72, 47, 63, 96]の要素数6を指定する。)
     for ($i = 0; $i < count($numArr[$arr]); $i++) {
