@@ -7,9 +7,17 @@ if (!empty($_POST)) {
   $score = $_POST['score'];
 }
 
-// 値の判定処理の関数
-// グローバル変数の$scoreとローカル変数の$scoreで名前が同じなのでややこしい
-function getScoreResult($score)
+/**
+ * スコアを引数に指定すると判定結果を返す
+ * 
+ * 引数の型はint型を指定すると空白の状態と、
+ * 文字を受け取った場合のエラーメッセージが表示されないので、
+ * string型を指定する
+ *
+ * @param string|null $score テキストボックスの値を引数とする
+ * @return string|null        判定結果を戻り値とする
+ */
+function getScoreResult(?string $score): ?string
 {
   if (!is_numeric($score)) {
     $result = '数値を入力してください';
