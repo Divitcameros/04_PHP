@@ -17,9 +17,9 @@ class Member
   {
     // $thisで自身のインスタンスプロパティを参照
     echo '<ul>';
-    echo '<li>' . $this->name . '</li>';
-    echo '<li>' . $this->age . '</li>';
-    echo '<li>' . $this->address . '</li>';
+    echo '<li>名前：' . $this->name . '</li>';
+    echo '<li>年齢：' . $this->age . '</li>';
+    echo '<li>住所：' . $this->address . '</li>';
     echo '</ul>';
   }
 }
