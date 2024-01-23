@@ -15,7 +15,7 @@ class Member
   // スタティックメソッドの定義
   public static function showInfo()
   {
-    // $thisで自身のインスタンスプロパティを参照
+    // self::で自身のスタティックプロパティを参照
     echo '<ul>';
     echo '<li>名前：' . self::$name . '</li>';
     echo '<li>年齢：' . self::$age . '</li>';
