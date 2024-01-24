@@ -6,11 +6,11 @@ class Member
 
   // スタティックプロパティの定義
   // 名前
-  public static $name    = '山田太郎';
+  public static $name;
   // 年齢
-  public static $age     = 21;
+  public static $age;
   // 住所
-  public static $address = '東京都';
+  public static $address;
 
   // スタティックメソッドの定義
   public static function showInfo()
@@ -24,10 +24,15 @@ class Member
   }
 }
 
+// スタティックプロパティに値を代入
+Member::$name    = '山田太郎';
+Member::$age     = 21;
+Member::$address = '東京都';
+
 // スタティックメソッドを実行
 Member::showInfo();
 
-// スタティックプロパティに値を代入
+// スタティックプロパティに値を再代入
 Member::$name    = '鈴木次郎';
 Member::$age     = 34;
 Member::$address = '大阪府';
