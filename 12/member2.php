@@ -12,6 +12,18 @@ class Member
   // 住所
   public $address;
 
+  // コンストラクタの定義
+  public function __construct()
+  {
+    echo '<p>インスタンスが生成されました</p>';
+  }
+
+  // デストラクタの定義
+  public function __destruct()
+  {
+    echo '<p>' . $this->name . 'が破棄されます</p>';
+  }
+  
   // インスタンスメソッドの定義
   public function showInfo()
   {
@@ -40,5 +52,3 @@ $m2->address = '大阪府';
 // インスタンスメソッドの実行
 $m1->showInfo();
 $m2->showInfo();
-
-?>
