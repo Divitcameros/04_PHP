@@ -1,4 +1,8 @@
 <?php
+// 型の厳格化
+declare(strict_types = 1);
+// クラスファイルの読み込み
+require_once(dirname(__FILE__) . '/Member.php');
 
 // クラスの定義
 class Member
