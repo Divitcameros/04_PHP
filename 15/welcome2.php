@@ -1,5 +1,11 @@
 <?php
 
+// 型の厳格化
+declare(strict_types = 1);
+
+// 挨拶変換のクラスファイルの読み込み
+require_once(dirname(__FILE__) . '/ConvertLang.php');
+
 // 言語データの二次元配列
 $totalLang = [
   [
@@ -52,12 +58,8 @@ if (!empty($_POST)) {
 // クッキー情報の登録(保存期間30日)
 setcookie('lang', $lang, time() + 86400 * 30);
 
-// あいさつ文を取得
-for ($g = 0; $g < count($totalLang); $g++) {
-  if ($lang === $totalLang[$g]['nation']) {
-    $message = $totalLang[$g]['greeting'];
-  }
-}
+// 挨拶文を取得
+$message = (new ConvertLang($totalLang))->getConvertLang($lang);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
