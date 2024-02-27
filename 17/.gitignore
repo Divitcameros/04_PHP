@@ -1,0 +1,6 @@
+**/vendor
+**/settings.php
+**/settings2.php
+**/mailEnv.php
+**/images/*
+**/uploads/*
