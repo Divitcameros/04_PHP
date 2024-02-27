@@ -101,6 +101,7 @@ if (!isset($error['name']) && !isset($error['email']) && !isset($error['detail']
   
 
   // メール送信
+  // 公式サイトにもユーザーへの返信メールが返ってくるが、管理者へのメールは管理者にしか届かないっぽい
   $resultAdmin = $mailerAdmin->send($msgAdmin);
   $resultUser  = $mailerUser->send($msgUser);
 }
