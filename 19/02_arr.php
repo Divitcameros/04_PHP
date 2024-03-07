@@ -33,6 +33,11 @@ $recipe = [
     'price' => 378
   ]
 ];
+// ①print_rで出力
+echo '<pre>';
+print_r($recipe);
+echo '</pre>';
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -44,11 +49,13 @@ $recipe = [
     <meta name="description" content="レシピの材料表ページ">
   </head>
   <body>
+    <!-- ②<table>で繰り返し処理を用いて出力 -->
+    <!-- ③<th>をforeachで出力 -->
     <table>
       <tr>
-        <th>code</th>
-        <th>name</th>
-        <th>price</th>
+      <?php foreach ($recipe[0] as $key => $value) : ?>
+        <th><?=$key?></th>
+      <?php endforeach; ?>
       </tr>
       <?php for ($i = 0; $i < count($recipe); $i++) : ?>
         <tr>
