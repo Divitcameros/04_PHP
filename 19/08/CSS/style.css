@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+h1, p {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+}
+
+th {
+  background-color: #eee;
+}
+
+img {
+  display: block;
+  padding: 3px;
+  border: 1px solid #aaa;
+  box-shadow: 0 0 8px #ccc;
+}
+
+img:hover {
+  box-shadow: 0 0 8px #ccc, 0 0 12px #669;
+}
+
+span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+span::after {
+  content: " ]";
+}
+
+span::before {
+  content: "[ ";
+}
+
+.error {
+  color: #990000;
+}
