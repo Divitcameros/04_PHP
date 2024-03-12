@@ -1,0 +1,25 @@
+@charset "UTF-8";
+h1,
+h2,
+ul,
+table {
+  border-collapse: collapse;
+  max-width: 600px;
+  margin: auto;
+}
+tr:nth-of-type(even) {
+  background-color: #f8f8f8;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: center;
+}
+th {
+  background-color: #ccc;
+}
+.error {
+  color: #900;
+  font-size: .8rem;
+  font-weight: bold;
+}
